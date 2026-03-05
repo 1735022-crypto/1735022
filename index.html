@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub - Play HTML Games</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 GameHub</h1>
+            <p>Paste your HTML games and play them instantly</p>
+        </header>
+
+        <main>
+            <div class="content-wrapper">
+                <!-- Game Paste Section -->
+                <section class="paste-section">
+                    <h2>Add a New Game</h2>
+                    <div class="form-group">
+                        <label for="gameName">Game Name:</label>
+                        <input type="text" id="gameName" placeholder="Enter game name..." />
+                    </div>
+                    <div class="form-group">
+                        <label for="gameCode">Game Code (HTML/CSS/JavaScript):</label>
+                        <textarea id="gameCode" placeholder="Paste your complete HTML game code here..."></textarea>
+                    </div>
+                    <button id="addGameBtn" class="btn btn-primary">Add Game</button>
+                </section>
+
+                <!-- Games Library Section -->
+                <section class="games-section">
+                    <h2>Your Games</h2>
+                    <div id="gamesList" class="games-grid">
+                        <p class="empty-message">No games added yet. Add your first game!</p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Game Card Template (hidden) -->
+    <template id="gameCardTemplate">
+        <div class="game-card">
+            <div class="game-card-content">
+                <h3 class="game-title"></h3>
+                <div class="game-actions">
+                    <button class="btn btn-play">Play</button>
+                    <button class="btn btn-delete">Delete</button>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="script.js"></script>
+</body>
+</html>
